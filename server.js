@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const drinks = require('./models/drinks.js');
+const drinks = require('./models/drinks');
 
 
 
@@ -10,9 +10,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/drinks', (req, res) => {
-    res.send(drinks);
+    res.render('drinks_index.ejs');
 });
-
 
 
 app.listen(port, () => {
