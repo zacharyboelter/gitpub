@@ -6,11 +6,13 @@ const drinks = require('./models/drinks');
 
 
 app.get('/', (req, res) => {
-    res.send('Welcome to the Gitpub App!');
+    res.render('drinks_index.ejs', { allDrinks: drinks });
 });
 
 app.get('/drinks', (req, res) => {
-    res.render('drinks_index.ejs');
+    res.render('drinks_index.ejs', {
+        drink: drinks[req.params.drinks]
+    });
 });
 
 
