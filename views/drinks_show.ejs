@@ -3,14 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Drinks App</title>
+    <title>Gitpub Drinks</title>
 </head>
 
-<body>
-    <h1>Drinks show page</h1>
 
-    <br /><br />
+<body>
+    <h1>At foo bar</h1>
+    <h2>
+        <%=drink.name[0].toUpperCase() + drink.name.substring(1) %>
+    </h2>
+    <img src="<%=drink.image %>">
+    <h3>
+        <%= drink.price %>
+    </h3>
     <a href="/drinks">Back to Index</a>
+
+
 </body>
 
 </html>
